@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ISOdZXRdckUqME2DIYYcyYdqSw674Kr7efhp+HvpASZmIeu5LpgtD5Z7YfgPTc2kSbCTx9KmiXOcvHSZZQ9pvw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Liliana.sntss\\Documents\\GitHub\\Kill_me_if_you_can\\killMeIfYouCan\\killMeIfYouCan\\killMeIfYouCan.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Liliana.sntss\\.nuget\\packages\\monogame.content.builder.task\\3.8.1.303\\monogame.content.builder.task.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\Liliana.sntss\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+  ],
+  "logs": []
+}
