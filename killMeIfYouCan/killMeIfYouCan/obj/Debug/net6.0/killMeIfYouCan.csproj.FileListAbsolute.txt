@@ -24,3 +24,5 @@ C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfY
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\obj\Debug\net6.0\killMeIfYouCan.genruntimeconfig.cache
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\obj\Debug\net6.0\ref\killMeIfYouCan.dll
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\unnamed.xnb
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\fire.xnb
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\FireBullet.xnb
