@@ -23,6 +23,7 @@ namespace killMeIfYouCan
         public override void Update(GameTime gameTime, List<Sprite> sprites)
         {
             Move();
+            Move2();
 
             foreach (var sprite in sprites)
             {
@@ -60,6 +61,26 @@ namespace killMeIfYouCan
                 Position.X -= 3;
             }
             if (Keyboard.GetState().IsKeyDown(Keys.D))
+            {
+                Position.X += 3;
+            }
+        }
+        private void Move2()
+        {
+
+            if (Keyboard.GetState().IsKeyDown(Keys.Up))
+            {
+                Position.Y -= 3;
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.Down))
+            {
+                Position.Y += 3;
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.Left))
+            {
+                Position.X -= 3;
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.Right))
             {
                 Position.X += 3;
             }

@@ -13,6 +13,8 @@ namespace killMeIfYouCan
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        
+
         public static int ScreenWidth = 1280;
         public static int ScreenHeight = 720;
 
@@ -22,6 +24,9 @@ namespace killMeIfYouCan
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferWidth = ScreenWidth;
+            graphics.PreferredBackBufferHeight = ScreenHeight;
+            graphics.ApplyChanges();
         }
 
         protected override void Initialize()
@@ -36,11 +41,16 @@ namespace killMeIfYouCan
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            var P1Texture = Content.Load<Texture2D>("fire");
-            var P2Texture = Content.Load<Texture2D>("unnamed");
+            var P1Texture = Content.Load<Texture2D>("fireeeeee");
+            var P2Texture = Content.Load<Texture2D>("fireeeeee");
 
             _sprites = new List<Sprite>()
       {
+                 new P2(P2Texture)
+        {
+          Position = new Vector2(100, 100),
+          Bullet = new Bullet(Content.Load<Texture2D>("FireBullet")),
+        },
         new P1(P1Texture)
         {
           Position = new Vector2(100, 100),
@@ -80,7 +90,7 @@ namespace killMeIfYouCan
         {
             GraphicsDevice.Clear(Color.SlateGray);
 
-            spriteBatch.Begin(samplerState: SamplerState.PointWrap); 
+            spriteBatch.Begin(samplerState: SamplerState.PointWrap);
 
             foreach (var sprite in _sprites)
                 sprite.Draw(spriteBatch);

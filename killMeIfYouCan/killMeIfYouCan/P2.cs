@@ -10,9 +10,8 @@ using System.Threading.Tasks;
 
 namespace killMeIfYouCan
 {
-    public class P1 : Sprite,ICollidable
+    public class P2 : Sprite,ICollidable
     {
-        //initialisation variable
         public Bullet Bullet;
 
         public int Health { get; set; }
@@ -25,8 +24,8 @@ namespace killMeIfYouCan
                 return Health <= 0;
             }
         }
-        //constructeur
-        public P1(Texture2D texture)
+
+        public P2(Texture2D texture)
           : base(texture)
         {
 
@@ -34,14 +33,12 @@ namespace killMeIfYouCan
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
         {
-            //appelle fonction de deplacement
             Move();
 
-            //si on appuye sur la touche espace sa ajoute une balle a la liste des sprites
-            if (_currentKey.IsKeyDown(Keys.Space) &&
-                _previousKey.IsKeyUp(Keys.Space))
+            if (_currentKey.IsKeyDown(Keys.RightControl) &&
+                _previousKey.IsKeyUp(Keys.RightControl))
             {
-                AddBullet (sprites);
+                AddBullet(sprites);
             }
 
             if (isDead)
@@ -49,7 +46,7 @@ namespace killMeIfYouCan
 
             foreach (var sprite in sprites)
             {
-                if (sprite is P1)
+                if (sprite is P2)
                     continue;
 
                 if (sprite.Rectangle.Intersects(this.Rectangle))
@@ -61,22 +58,21 @@ namespace killMeIfYouCan
 
         }
 
-        //deplacement du personnage
         public void Move()
         {
             _previousKey = _currentKey;
             _currentKey = Keyboard.GetState();
 
-            if (Keyboard.GetState().IsKeyDown(Keys.A))
+            if (Keyboard.GetState().IsKeyDown(Keys.Left))
                 Position.X -= 3;
-            else if (Keyboard.GetState().IsKeyDown(Keys.D))
+            else if (Keyboard.GetState().IsKeyDown(Keys.Right))
                 Position.X += 3;
 
             Direction = new Vector2((float)Math.Cos(_rotation), (float)Math.Sin(_rotation));
 
-            if (Keyboard.GetState().IsKeyDown(Keys.W))
+            if (Keyboard.GetState().IsKeyDown(Keys.Up))
                 Position.Y -= 3;
-            else if (Keyboard.GetState().IsKeyDown(Keys.S))
+            else if (Keyboard.GetState().IsKeyDown(Keys.Down))
                 Position.Y += 3;
             Position = Vector2.Clamp(Position, new Vector2(0, 0), new Vector2(Game1.ScreenWidth - this.Rectangle.Width, Game1.ScreenHeight - this.Rectangle.Height));
         }
