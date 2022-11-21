@@ -20,10 +20,11 @@ namespace killMeIfYouCan
         public Vector2 Velocity;
         public float RotationVelocity = 3f;
         public float LinearVelocity = 4f;
-
+        public SpriteEffect spriteEffects;
         public Sprite Parent;
         public float LifeSpan = 0f;
         public bool IsRemoved = false;
+        public int Health;
 
         protected KeyboardState _currentKey;
         protected KeyboardState _previousKey;
@@ -31,9 +32,10 @@ namespace killMeIfYouCan
         public Sprite(Texture2D texture)
         {
             _texture = texture;
-
+            Health = 100;
             Origin = new Vector2(_texture.Width / 2, _texture.Height / 2);
         }
+
         public Rectangle Rectangle
         {
             get

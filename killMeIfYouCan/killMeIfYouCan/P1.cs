@@ -14,10 +14,16 @@ namespace killMeIfYouCan
     {
         //initialisation variable
         public Bullet Bullet;
-
-        public int Health { get; set; }
+        private Keys toucheTir;
+        private Keys DeplacementGauche;
+        private Keys DeplacementDroite;
+        private Keys DeplacementHaut;
+        private Keys DeplacementBas;
+       
+        public double Health;
         public float Speed { get; set; }
         public int Score;
+   
         public bool isDead
         {
             get
@@ -26,11 +32,18 @@ namespace killMeIfYouCan
             }
         }
         //constructeur
-        public P1(Texture2D texture)
-          : base(texture)
+        public P1(Texture2D newtexture, Keys toucheTir,Keys DeplacementGauche, Keys DeplacementDroite, Keys DeplacementHaut,Keys DeplacementBas)
+         : base(newtexture)
         {
-
+           this.toucheTir= toucheTir;
+            this.DeplacementGauche = DeplacementGauche;
+            this.DeplacementDroite = DeplacementDroite; 
+            this.DeplacementBas = DeplacementBas;
+            this.DeplacementHaut = DeplacementHaut;
+           //this.Health = health;
         }
+
+      
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
         {
@@ -38,12 +51,12 @@ namespace killMeIfYouCan
             Move();
 
             //si on appuye sur la touche espace sa ajoute une balle a la liste des sprites
-            if (_currentKey.IsKeyDown(Keys.Space) &&
-                _previousKey.IsKeyUp(Keys.Space))
-            {
-                AddBullet (sprites);
+               if (_currentKey.IsKeyDown(toucheTir) &&
+                _previousKey.IsKeyUp(toucheTir))
+              {
+                AddBullet(sprites);
             }
-
+            
             if (isDead)
                 return;
 
@@ -67,20 +80,20 @@ namespace killMeIfYouCan
             _previousKey = _currentKey;
             _currentKey = Keyboard.GetState();
 
-            if (Keyboard.GetState().IsKeyDown(Keys.A))
+            if (Keyboard.GetState().IsKeyDown(DeplacementGauche))
                 Position.X -= 3;
-            else if (Keyboard.GetState().IsKeyDown(Keys.D))
+            else if (Keyboard.GetState().IsKeyDown(DeplacementDroite))
                 Position.X += 3;
 
             Direction = new Vector2((float)Math.Cos(_rotation), (float)Math.Sin(_rotation));
 
-            if (Keyboard.GetState().IsKeyDown(Keys.W))
+            if (Keyboard.GetState().IsKeyDown(DeplacementHaut))
                 Position.Y -= 3;
-            else if (Keyboard.GetState().IsKeyDown(Keys.S))
+            else if (Keyboard.GetState().IsKeyDown(DeplacementBas))
                 Position.Y += 3;
             Position = Vector2.Clamp(Position, new Vector2(0, 0), new Vector2(Game1.ScreenWidth - this.Rectangle.Width, Game1.ScreenHeight - this.Rectangle.Height));
         }
-
+       
         private void AddBullet(List<Sprite> sprites)
         {
             var bullet = Bullet.Clone() as Bullet;

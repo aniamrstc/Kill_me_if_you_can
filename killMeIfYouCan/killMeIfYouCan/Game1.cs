@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Runtime.ConstrainedExecution;
+using System.Security.Cryptography;
 
 namespace killMeIfYouCan
 {
@@ -12,11 +13,10 @@ namespace killMeIfYouCan
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
-        
-
+      
         public static int ScreenWidth = 1280;
         public static int ScreenHeight = 720;
+   
 
         private List<Sprite> _sprites;
 
@@ -43,34 +43,36 @@ namespace killMeIfYouCan
 
             var P1Texture = Content.Load<Texture2D>("fireeeeee");
             var P2Texture = Content.Load<Texture2D>("fireeeeee");
-
-            _sprites = new List<Sprite>()
+         
+             _sprites = new List<Sprite>()
       {
-                 new P2(P2Texture)
+               new P1(P2Texture,Keys.RightControl,Keys.Left,Keys.Right,Keys.Up,Keys.Down)
         {
-          Position = new Vector2(100, 100),
+          Position = new Vector2(1150, 100),
           Bullet = new Bullet(Content.Load<Texture2D>("FireBullet")),
         },
-        new P1(P1Texture)
+       new P1(P1Texture,Keys.Space,Keys.A,Keys.D,Keys.W,Keys.S)
         {
+           
           Position = new Vector2(100, 100),
           Bullet = new Bullet(Content.Load<Texture2D>("FireBullet")),
         },
       };
+          
         }
 
         protected override void UnloadContent()
         {
-
         }
 
         protected override void Update(GameTime gameTime)
         {
             foreach (var sprite in _sprites.ToArray())
                 sprite.Update(gameTime, _sprites);
-
+          
             PostUpdate();
-
+          
+           
             base.Update(gameTime);
         }
 
@@ -78,10 +80,20 @@ namespace killMeIfYouCan
         {
             for (int i = 0; i < _sprites.Count; i++)
             {
-                if (_sprites[i].IsRemoved)
+                var sprite = _sprites[i];
+                if (sprite.IsRemoved)
                 {
                     _sprites.RemoveAt(i);
                     i--;
+                }
+                if(sprite is Player)
+                {
+                    var player = sprite as Player;
+
+                    if (player.HasDied)
+                    {
+                        Exit();
+                    }
                 }
             }
         }
@@ -89,9 +101,8 @@ namespace killMeIfYouCan
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.SlateGray);
-
             spriteBatch.Begin(samplerState: SamplerState.PointWrap);
-
+            
             foreach (var sprite in _sprites)
                 sprite.Draw(spriteBatch);
 
