@@ -17,7 +17,7 @@ namespace killMeIfYouCan
         public Player(Texture2D texture)
           : base(texture)
         {
-
+            
         }
 
         public override void Update(GameTime gameTime, List<Sprite> sprites)
@@ -44,6 +44,7 @@ namespace killMeIfYouCan
             // Resest the velocity for when the user isn't holding down a key
             Velocity = Vector2.Zero;
         }
+      
 
         private void Move()
         {

@@ -27,3 +27,4 @@ C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfY
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\fire.xnb
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\FireBullet.xnb
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\fireeeeee.xnb
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\healthBar.xnb

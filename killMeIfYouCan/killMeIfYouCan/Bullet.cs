@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,28 @@ namespace killMeIfYouCan
                 IsRemoved = true;
 
             Position += Direction * LinearVelocity;
+
+
+            foreach (var sprite in sprites)
+            {
+
+                if (Rectangle.Intersects(sprite.Rectangle))
+                {
+                    if (sprite is P1)
+                    {
+                        
+                        sprite.Health -= 10;
+                        Debug.Print(sprite.Health.ToString());
+                        if (sprite is Bullet)
+                        {
+                            sprite.IsRemoved = true;
+                        }
+
+                    }
+                }
+            }
         }
     }
 }
+
+
