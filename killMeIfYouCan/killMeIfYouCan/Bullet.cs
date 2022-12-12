@@ -13,13 +13,14 @@ namespace killMeIfYouCan
     {
         private float _timer;
 
+
         public Bullet(Texture2D texture)
           : base(texture)
         {
 
         }
 
-        public override void Update(GameTime gameTime, List<Sprite> sprites)
+        public override void Update(GameTime gameTime, List<Sprite> sprites,P1 p1,P2 p2)
         {
             _timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
@@ -34,7 +35,7 @@ namespace killMeIfYouCan
 
                 if (Rectangle.Intersects(sprite.Rectangle))
                 {
-                    if (sprite is P1)
+                    if (sprite is P2)
                     {
                         
                         sprite.Health -= 10;
@@ -42,6 +43,11 @@ namespace killMeIfYouCan
                         if (sprite is Bullet)
                         {
                             sprite.IsRemoved = true;
+                        }
+                        if (sprite.Health == 0 || sprite.Health < 0)
+                        {
+
+                            Debug.Print("mort");
                         }
 
                     }

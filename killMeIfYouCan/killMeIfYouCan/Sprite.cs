@@ -20,7 +20,7 @@ namespace killMeIfYouCan
         public Vector2 Velocity;
         public float RotationVelocity = 3f;
         public float LinearVelocity = 4f;
-        public SpriteEffect spriteEffects;
+        public SpriteEffect spriteEffects;      
         public Sprite Parent;
         public float LifeSpan = 0f;
         public bool IsRemoved = false;
@@ -32,7 +32,7 @@ namespace killMeIfYouCan
         public Sprite(Texture2D texture)
         {
             _texture = texture;
-            Health = 100;
+            Health = 200;
             Origin = new Vector2(_texture.Width / 2, _texture.Height / 2);
         }
 
@@ -55,13 +55,11 @@ namespace killMeIfYouCan
         {
             get
             {
-                return Matrix.CreateTranslation(new Vector3(-Origin, 0)) *
-                    Matrix.CreateRotationZ(_rotation) *
-                    Matrix.CreateTranslation(new Vector3(Position, 0));
+                return Matrix.CreateTranslation(new Vector3(-Origin, 0)) * Matrix.CreateRotationZ(_rotation) * Matrix.CreateTranslation(new Vector3(Position, 0));
             }
         }
 
-        public virtual void Update(GameTime gameTime, List<Sprite> sprites)
+        public virtual void Update(GameTime gameTime, List<Sprite> sprites,P1 p1,P2 p2)
         {
 
         }

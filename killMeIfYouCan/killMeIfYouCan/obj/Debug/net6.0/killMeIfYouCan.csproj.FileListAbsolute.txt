@@ -58,3 +58,14 @@ C:\Users\Liliana.sntss\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMe
 C:\Users\Liliana.sntss\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\obj\Debug\net6.0\killMeIfYouCan.pdb
 C:\Users\Liliana.sntss\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\obj\Debug\net6.0\killMeIfYouCan.genruntimeconfig.cache
 C:\Users\Liliana.sntss\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\obj\Debug\net6.0\ref\killMeIfYouCan.dll
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Autofac.dll
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\MonoGame.Extended.dll
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\MonoGame.Extended.Graphics.dll
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\MonoGame.Extended.Tiled.dll
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\fireeeeee2.xnb
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\back.xnb
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\front.xnb
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\play.xnb
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\Button.xnb
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\Font.xnb

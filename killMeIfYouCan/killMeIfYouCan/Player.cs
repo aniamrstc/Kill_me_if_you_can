@@ -20,7 +20,7 @@ namespace killMeIfYouCan
             
         }
 
-        public override void Update(GameTime gameTime, List<Sprite> sprites)
+        public override void Update(GameTime gameTime, List<Sprite> sprites, P1 p1,P2 p2)
         {
             Move();
             Move2();

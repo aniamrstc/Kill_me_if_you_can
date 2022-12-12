@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace killMeIfYouCan
 {
-    public class P1 : Sprite,ICollidable
+    public class P1 : Sprite, ICollidable
     {
         //initialisation variable
         public Bullet Bullet;
@@ -19,11 +19,11 @@ namespace killMeIfYouCan
         private Keys DeplacementDroite;
         private Keys DeplacementHaut;
         private Keys DeplacementBas;
-       
+
         public double Health;
         public float Speed { get; set; }
         public int Score;
-   
+
         public bool isDead
         {
             get
@@ -32,31 +32,31 @@ namespace killMeIfYouCan
             }
         }
         //constructeur
-        public P1(Texture2D newtexture, Keys toucheTir,Keys DeplacementGauche, Keys DeplacementDroite, Keys DeplacementHaut,Keys DeplacementBas)
+        public P1(Texture2D newtexture, Keys toucheTir, Keys DeplacementGauche, Keys DeplacementDroite, Keys DeplacementHaut, Keys DeplacementBas)
          : base(newtexture)
         {
-           this.toucheTir= toucheTir;
+            this.toucheTir = toucheTir;
             this.DeplacementGauche = DeplacementGauche;
-            this.DeplacementDroite = DeplacementDroite; 
+            this.DeplacementDroite = DeplacementDroite;
             this.DeplacementBas = DeplacementBas;
             this.DeplacementHaut = DeplacementHaut;
-           //this.Health = health;
+            //this.Health = health;
         }
 
-      
 
-        public override void Update(GameTime gameTime, List<Sprite> sprites)
+
+        public override void Update(GameTime gameTime, List<Sprite> sprites,P1 p1,P2 p2)
         {
             //appelle fonction de deplacement
             Move();
 
             //si on appuye sur la touche espace sa ajoute une balle a la liste des sprites
-               if (_currentKey.IsKeyDown(toucheTir) &&
-                _previousKey.IsKeyUp(toucheTir))
-              {
+            if (_currentKey.IsKeyDown(toucheTir) &&
+             _previousKey.IsKeyUp(toucheTir))
+            {
                 AddBullet(sprites);
             }
-            
+
             if (isDead)
                 return;
 
@@ -80,10 +80,10 @@ namespace killMeIfYouCan
             _previousKey = _currentKey;
             _currentKey = Keyboard.GetState();
 
-            if (Keyboard.GetState().IsKeyDown(DeplacementGauche))
-                Position.X -= 3;
-            else if (Keyboard.GetState().IsKeyDown(DeplacementDroite))
-                Position.X += 3;
+            //if (Keyboard.GetState().IsKeyDown(DeplacementGauche))
+            //    Position.X -= 3;
+            //else if (Keyboard.GetState().IsKeyDown(DeplacementDroite))
+            //    Position.X += 3;
 
             Direction = new Vector2((float)Math.Cos(_rotation), (float)Math.Sin(_rotation));
 
@@ -93,7 +93,7 @@ namespace killMeIfYouCan
                 Position.Y += 3;
             Position = Vector2.Clamp(Position, new Vector2(0, 0), new Vector2(Game1.ScreenWidth - this.Rectangle.Width, Game1.ScreenHeight - this.Rectangle.Height));
         }
-       
+
         private void AddBullet(List<Sprite> sprites)
         {
             var bullet = Bullet.Clone() as Bullet;
@@ -108,6 +108,14 @@ namespace killMeIfYouCan
         public virtual void OnCollide(Sprite sprite)
         {
             throw new NotImplementedException();
+        }
+        public Rectangle boite
+        {
+            get
+            {
+                return new Rectangle((int)Position.X, (int)Position.Y, _texture.Width, _texture.Height);
+            }
+
         }
     }
 }
