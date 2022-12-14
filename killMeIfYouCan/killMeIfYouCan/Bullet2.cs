@@ -12,7 +12,7 @@ namespace killMeIfYouCan
     public class Bullet2 : Sprite
     {
         private float _timer;
-        private bool _estmort=false;
+       
        // public Game1 game =new Game1();
 
         public Bullet2(Texture2D texture)
@@ -21,7 +21,7 @@ namespace killMeIfYouCan
 
         }
 
-        public bool Estmort { get => _estmort; set => _estmort = value; }
+     
 
         public override void Update(GameTime gameTime, List<Sprite> sprites, P1 p1, P2 p2)
         {
@@ -42,6 +42,7 @@ namespace killMeIfYouCan
                     {
 
                         sprite.Health -= 10;
+
                         Debug.Print("P1: " + sprite.Health.ToString());
                         if (sprite is Bullet)
                         {
@@ -49,8 +50,9 @@ namespace killMeIfYouCan
                         }
                         if (sprite.Health == 0 || sprite.Health < 0)
                         {
-                           Environment.Exit(0);
+                          // Environment.Exit(0);
                             Debug.Print("mort");
+
                         }
 
                     }

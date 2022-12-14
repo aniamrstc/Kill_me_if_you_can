@@ -33,11 +33,15 @@ namespace killMeIfYouCan
         private State _currentState;
         private State _nextState;
        bool visible=false;
+        bool estmort = false;
+
+        
         
         public void ChangeState(State state)
         {
             _nextState = state;
             visible = !visible;
+            
         }
         public Game1()
         {
@@ -63,8 +67,8 @@ namespace killMeIfYouCan
 
             var P1Texture = Content.Load<Texture2D>("fireeeeee");
             var P2Texture = Content.Load<Texture2D>("fireeeeee2");
-            _texture = Content.Load<Texture2D>("unnamed");
-            _position = new Vector2(0, 0);
+            _texture = Content.Load<Texture2D>("gameover");
+            _position = new Vector2(640, 250);
             bullet = new Bullet2(_texture);
             _sprites = new List<Sprite>()
       {
@@ -90,7 +94,13 @@ namespace killMeIfYouCan
         protected override void Update(GameTime gameTime)
         {
             foreach (var sprite in _sprites.ToArray())
-                sprite.Update(gameTime, _sprites,_p1,_p2);
+            {
+                if (sprite.Health == 0 || sprite.Health < 0)
+                {
+                    estmort = true;
+                }
+                sprite.Update(gameTime, _sprites, _p1, _p2);
+            }
            
             PostUpdate();
             if(_nextState != null)
@@ -99,6 +109,7 @@ namespace killMeIfYouCan
                 _nextState = null;
                 
             }
+            
             _currentState.Update(gameTime);
             _currentState.PostUpdate(gameTime);
 
@@ -131,8 +142,10 @@ namespace killMeIfYouCan
         {
             GraphicsDevice.Clear(Color.SlateGray);
             spriteBatch.Begin(samplerState: SamplerState.PointWrap);
-            if (bullet.Estmort == true)
+
+            if (estmort == true)
             {
+                visible = false;
                 spriteBatch.Draw(_texture, _position, null, Color.White, 0, _texture.Bounds.Center.ToVector2(), 0.125f, 0, 0);
             }
             if(visible==true)
