@@ -61,7 +61,7 @@ namespace killMeIfYouCan
 
         public virtual void Update(GameTime gameTime, List<Sprite> sprites,P1 p1,P2 p2)
         {
-
+           
         }
 
         public virtual void Draw(SpriteBatch spriteBatch)
