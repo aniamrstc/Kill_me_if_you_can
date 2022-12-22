@@ -58,11 +58,8 @@ C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfY
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\MonoGame.Extended.Tiled.dll
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\fireeeeee2.xnb
-C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\back.xnb
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\Button.xnb
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\Font.xnb
-C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\gameover.xnb
-C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\gameover2png.xnb
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\health\pixil-layer-1.xnb
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\health\pixil-layer-2.xnb
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\health\pixil-layer-3.xnb
@@ -74,7 +71,6 @@ C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfY
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\health\pixil-layer-9.xnb
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\health\pixil-layer-0.xnb
 C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\health\pixil-layer-10.xnb
-C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\endgame2 (2).xnb
 C:\Users\Liliana.sntss\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\Button.xnb
 C:\Users\Liliana.sntss\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\fireeeeee2.xnb
 C:\Users\Liliana.sntss\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\Font.xnb
@@ -100,3 +96,9 @@ C:\Users\Liliana.sntss\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMe
 C:\Users\Liliana.sntss\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\bulletWater.xnb
 C:\Users\Liliana.sntss\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\WaterPerso.xnb
 C:\Users\Liliana.sntss\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\endGame2.xnb
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\persoEau.xnb
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\waterBullet.xnb
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\bulletWater.xnb
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\endGame1.xnb
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\endGame2.xnb
+C:\Users\Ania.mrstc\Documents\GitHub\Kill_me_if_you_can\killMeIfYouCan\killMeIfYouCan\bin\Debug\net6.0\Content\WaterPerso.xnb

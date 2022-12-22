@@ -29,7 +29,7 @@ namespace killMeIfYouCan
 
             var newGameButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(550, 200),
+                Position = new Vector2(550, 300),
                 Text = "New Game",
             };
 
@@ -40,7 +40,7 @@ namespace killMeIfYouCan
 
             var quitGameButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(550, 300),
+                Position = new Vector2(550, 400),
                 Text = "Quit Game",
             };
 
