@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Auteur : Ania Marostica, Liliana Santos
+ * Date : 22/12/2022
+ * Version : 1.0
+ * Projet :  Kill me if you can   
+ */
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -26,13 +32,13 @@ namespace killMeIfYouCan
 
             if (_timer >= LifeSpan)
                 IsRemoved = true;
-
+            //defini la direction de la balle
             Position += Direction * LinearVelocity;
 
 
             foreach (var sprite in sprites)
             {
-
+                //si la balle touche le sprite et qu'il est un p1 alors on baisse sa vie et on retire la balle
                 if (Rectangle.Intersects(sprite.Rectangle))
                 {
                     if (sprite is P2)

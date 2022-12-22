@@ -1,4 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+﻿/*
+ * Auteur : Ania Marostica, Liliana Santos
+ * Date : 22/12/2022
+ * Version : 1.0
+ * Projet :  Kill me if you can   
+ */
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -12,7 +18,7 @@ namespace killMeIfYouCan
     public class Button:Component
     {
         #region Fields
-
+        //initialisation des variables
         private MouseState _currentMouse;
 
         private SpriteFont _font;
@@ -28,13 +34,14 @@ namespace killMeIfYouCan
         #region Properties
 
         public event EventHandler Click;
-
+        //propriétés
         public bool Clicked { get; private set; }
 
         public Color PenColour { get; set; }
 
         public Vector2 Position { get; set; }
 
+        //sa definie un contour autour du sprite selon son hauteur et sa largeur
         public Rectangle Rectangle
         {
             get
@@ -48,7 +55,7 @@ namespace killMeIfYouCan
         #endregion
 
         #region Methods
-
+        //constructeur
         public Button(Texture2D texture, SpriteFont font)
         {
             _texture = texture;
@@ -58,6 +65,7 @@ namespace killMeIfYouCan
             PenColour = Color.Black;
         }
 
+        //methode qui va dessiner les bouton et definir leur couleur
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             var colour = Color.White;
@@ -75,7 +83,7 @@ namespace killMeIfYouCan
                 spriteBatch.DrawString(_font, Text, new Vector2(x, y), PenColour);
             }
         }
-
+        //methode update qui va mettre a jour l'etat des bouton et si la souris passe dessus
         public override void Update(GameTime gameTime)
         {
             _previousMouse = _currentMouse;

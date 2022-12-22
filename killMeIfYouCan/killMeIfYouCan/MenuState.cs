@@ -1,4 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+﻿/* Auteur : Ania Marostica, Liliana Santos
+ * Date : 22/12/2022
+ * Version : 1.0
+ * Projet :  Kill me if you can   
+ */
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -13,8 +18,10 @@ namespace killMeIfYouCan
 {
     public class MenuState : State
     {
+        //list de composant 
         private List<Component> _components;
-  
+
+        //constructeur qui herite de la classe state il va definir la texture qu'on va utiliser,la police et le nombre de button dans notre menu ainsi que le texte ecrit dedans
         public MenuState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content) : base(game, graphicsDevice, content)
         {
             var buttonTexture = _content.Load<Texture2D>("Button");
@@ -39,21 +46,19 @@ namespace killMeIfYouCan
 
             quitGameButton.Click += QuitGameButton_Click;
 
-            _components = new List<Component>()
-      {
-        newGameButton,
+            _components = new List<Component>(){
+                newGameButton,
      
-        quitGameButton,
-      };
+                quitGameButton,
+            };
         }
+
+        // dessine tout les composant
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-           // spriteBatch.Begin();
-
+          
             foreach (var component in _components)
                 component.Draw(gameTime, spriteBatch);
-
-            //spriteBatch.End();
         }
         private void LoadGameButton_Click(object sender, EventArgs e)
         {
@@ -63,16 +68,20 @@ namespace killMeIfYouCan
         {
            //throw new NotImplementedException();
         }
+
+        //methode du button lancer le jeu 
         private void NewGameButton_Click(object sender, EventArgs e)
         {
             _game1.ChangeState(new GameState(_game1, _graphicsDevice, _content));
         }
 
+        //met a jour les composant
         public override void Update(GameTime gameTime)
         {
             foreach (var component in _components)
                 component.Update(gameTime);
         }
+        //methode du button quitter le jeu 
         private void QuitGameButton_Click(object sender, EventArgs e)
         {
             _game1.Exit();

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* Auteur : Ania Marostica, Liliana Santos
+ * Date : 22/12/2022
+ * Version : 1.0
+ * Projet :  Kill me if you can   
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +25,7 @@ namespace killMeIfYouCan
             
         }
 
+        //update des joueur
         public override void Update(GameTime gameTime, List<Sprite> sprites, P1 p1,P2 p2)
         {
             Move();
@@ -38,14 +44,14 @@ namespace killMeIfYouCan
 
             Position += Velocity;
 
-            // Keep the sprite on the screen
+            //garde le sprite dans l'ecran
             Position.X = MathHelper.Clamp(Position.X, 0, Game1.ScreenWidth - Rectangle.Width);
 
-            // Resest the velocity for when the user isn't holding down a key
             Velocity = Vector2.Zero;
         }
-      
 
+
+        //deplacement p1
         private void Move()
         {
 
@@ -66,6 +72,8 @@ namespace killMeIfYouCan
                 Position.X += 3;
             }
         }
+
+        //deplacement p2
         private void Move2()
         {
 

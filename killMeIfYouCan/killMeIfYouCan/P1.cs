@@ -1,4 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+﻿/* Auteur : Ania Marostica, Liliana Santos
+ * Date : 22/12/2022
+ * Version : 1.0
+ * Projet :  Kill me if you can   
+ */
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -24,6 +29,7 @@ namespace killMeIfYouCan
         public float Speed { get; set; }
         public int Score;
 
+        //bool de mort
         public bool isDead
         {
             get
@@ -40,7 +46,7 @@ namespace killMeIfYouCan
             this.DeplacementDroite = DeplacementDroite;
             this.DeplacementBas = DeplacementBas;
             this.DeplacementHaut = DeplacementHaut;
-            //this.Health = health;
+            
         }
 
 
@@ -80,11 +86,6 @@ namespace killMeIfYouCan
             _previousKey = _currentKey;
             _currentKey = Keyboard.GetState();
 
-            //if (Keyboard.GetState().IsKeyDown(DeplacementGauche))
-            //    Position.X -= 3;
-            //else if (Keyboard.GetState().IsKeyDown(DeplacementDroite))
-            //    Position.X += 3;
-
             Direction = new Vector2((float)Math.Cos(_rotation), (float)Math.Sin(_rotation));
 
             if (Keyboard.GetState().IsKeyDown(DeplacementHaut))
@@ -94,6 +95,7 @@ namespace killMeIfYouCan
             Position = Vector2.Clamp(Position, new Vector2(0, 0), new Vector2(Game1.ScreenWidth - this.Rectangle.Width, Game1.ScreenHeight - this.Rectangle.Height));
         }
 
+        //ajoute des bullet a la liste de sprite
         private void AddBullet(List<Sprite> sprites)
         {
             var bullet = Bullet.Clone() as Bullet;
@@ -105,6 +107,7 @@ namespace killMeIfYouCan
 
             sprites.Add(bullet);
         }
+        //collision
         public virtual void OnCollide(Sprite sprite)
         {
             throw new NotImplementedException();

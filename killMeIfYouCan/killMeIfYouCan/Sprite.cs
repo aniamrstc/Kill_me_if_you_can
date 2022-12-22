@@ -1,4 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+﻿/* Auteur : Ania Marostica, Liliana Santos
+ * Date : 22/12/2022
+ * Version : 1.0
+ * Projet :  Kill me if you can   
+ */
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -11,6 +16,7 @@ namespace killMeIfYouCan
 {
     public class Sprite : ICloneable
     {
+        //initialisation variable
         protected Texture2D _texture;
         protected float _rotation;
 
@@ -29,6 +35,7 @@ namespace killMeIfYouCan
         protected KeyboardState _currentKey;
         protected KeyboardState _previousKey;
 
+        //constructeur definie une texture, une vie et une taille
         public Sprite(Texture2D texture)
         {
             _texture = texture;
@@ -36,6 +43,7 @@ namespace killMeIfYouCan
             Origin = new Vector2(_texture.Width / 2, _texture.Height / 2);
         }
 
+        //sa definie un contour autour du sprite selon son hauteur et sa largeur
         public Rectangle Rectangle
         {
             get
@@ -59,11 +67,13 @@ namespace killMeIfYouCan
             }
         }
 
+        //met a jour les sprites
         public virtual void Update(GameTime gameTime, List<Sprite> sprites,P1 p1,P2 p2)
         {
            
         }
 
+        //dessine les sprites
         public virtual void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_texture, Position, null, Color.White, _rotation,_texture.Bounds.Center.ToVector2(),2
